@@ -82,6 +82,7 @@
   .photo{ margin:0; position:relative; overflow:hidden; border:1px solid var(--line); }
   .photo img{ width:100%; height:100%; object-fit:cover; }
   .photo figcaption{ position:absolute; left:.7rem; bottom:.55rem; font-family:var(--font-mono); font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(242,237,228,.6); }
+  .photo.tint-top::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(124,47,66,.6) 0%, rgba(124,47,66,0) 42%); pointer-events:none; }
 
   .yt-embed{ position:relative; width:100%; aspect-ratio:16/9; background:#000; margin:0 0 1.1rem; border:1px solid var(--line); }
   .yt-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
@@ -154,7 +155,7 @@
         <div class="yt-embed"><iframe src="https://www.youtube.com/embed/lO1I1ZeL8Qc" title="Tiny SEKTA | La Pochi & AURINAYA" loading="lazy" allowfullscreen></iframe></div>
         <p class="yt-label">Lo último: <em>Tiny SEKTA</em> · La Pochi &amp; AURINAYA</p>
 
-        <figure class="photo" style="aspect-ratio:1/1"><img src="assets/img/aurinaya.jpg" alt="" style="object-position:50% 25%"><figcaption>AURINAYA</figcaption></figure>
+        <figure class="photo" style="aspect-ratio:1/1"><img src="assets/img/aurinaya.jpg" alt="" style="object-position:50% 45%"><figcaption>AURINAYA</figcaption></figure>
         <p class="note" style="margin-top:.9rem">AURINAYA, dúo de electrónica. Desde 2020 toca en clubes nocturnos y organiza eventos propios.</p>
         <a class="lk" href="https://aurinaya.sekito.ar/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Sitio</span><span class="lk-d">aurinaya.sekito.ar</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.youtube.com/playlist?list=PLzBcQRXYLsbs_0x57uRxppeush0_SkAvW" target="_blank" rel="noopener"><span class="lk-t">DJ sets y live sets</span><span class="lk-d">Playlist en YouTube</span><span class="lk-a">↗</span></a>
@@ -188,7 +189,7 @@
       <div class="g-wide">
         <h3 class="gh">Live set</h3>
         <div class="split">
-          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/liveset-rig.jpg" alt="" style="object-position:50% 20%"><figcaption>Live set</figcaption></figure>
+          <figure class="photo tint-top" style="aspect-ratio:3/5; max-height:620px"><img src="assets/img/liveset-rig.jpg" alt="" style="object-position:50% 12%"><figcaption>Live set</figcaption></figure>
           <div>
             <p class="note">Sets en vivo, o híbridos: se suman la guitarra eléctrica, los sintetizadores, las cajas de ritmos y máquinas, en formatos que combinan cabina, escenario y performance.</p>
             <div class="lk plain"><span class="lk-t">Live Set “La Biblioteca” · 2024</span><span class="lk-d">Presentación en formato live, producida por Unique Community y Smile Group</span></div>
@@ -208,7 +209,7 @@
 <!-- ============ 02 · GESTIÓN CULTURAL ============ -->
 <section id="gestion-cultural">
   <header class="banner">
-    <div class="banner-bg"><img src="assets/img/gestion-cadenas.jpg" alt="" style="object-position:50% 30%"></div>
+    <div class="banner-bg"><img src="assets/img/gestion-cadenas.jpg" alt="" style="object-position:50% 45%"></div>
     <div class="wrap">
       <div class="sec-num">02</div>
       <h2 class="sec-title">Gestión<br><span class="out">Cultural</span></h2>
@@ -295,7 +296,7 @@
 
   <div class="body"><div class="wrap">
     <div class="split">
-      <figure class="photo polaroid"><img src="assets/img/avatar.jpg" alt=""><figcaption>Encuentro académico</figcaption></figure>
+      <figure class="photo polaroid"><img src="assets/img/academico-duo.jpg" alt=""><figcaption>Encuentro académico</figcaption></figure>
       <div>
         <p style="margin:0 0 1.6rem"><span class="estado">En construcción</span></p>
         <h3 class="gh">CV</h3>
@@ -309,7 +310,7 @@
 <!-- ============ 05 · CONTACTO ============ -->
 <section id="contacto" style="border-bottom:none">
   <header class="banner" style="min-height:48vh">
-    <div class="banner-bg"><img src="assets/img/contacto-bosque.jpg" alt="" style="object-position:50% 35%"></div>
+    <div class="banner-bg"><img src="assets/img/contacto-bosque-duo.jpg" alt="" style="object-position:50% 55%"></div>
     <div class="wrap">
       <div class="sec-num">05</div>
       <h2 class="sec-title">Contacto</h2>
