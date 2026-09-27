@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NAYA — música, producción cultural, clases e investigación</title>
-<meta name="description" content="Música (DJ, live, producción, música escénica), producción cultural, clases e investigación. Ramiro Naya.">
+<title>NAYA — música, gestión cultural, clases e investigación</title>
+<meta name="description" content="Música (DJ, live, producción, música escénica), gestión cultural, clases e investigación. Ramiro Naya.">
 <meta name="theme-color" content="#0b0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     --bg:#0b0a0a; --bg-raised:#15120f; --bg-feature:#1a1108;
     --line:#2e2620; --line-soft:#241e19;
     --text:#f2ede4; --text-muted:#a89d8e; --text-faint:#6f665c;
-    --gold:#e8b04a; --gold-soft:#8a6c2f; --terra:#e0653a; --terra-deep:#b23f1c; --sand:#cbb389;
+    --gold:#e8b04a; --gold-soft:#8a6c2f; --terra:#c14a63; --terra-deep:#7c2f42; --sand:#cbb389;
     --max:1180px;
     --font-display:"Fraunces",ui-serif,Georgia,serif;
     --font-poster:"Anton",ui-sans-serif,sans-serif;
@@ -55,7 +55,7 @@
   .sec-num{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.2em; color:var(--gold); display:flex; align-items:center; gap:.7rem; margin-bottom:.9rem; }
   .sec-num::before{ content:""; width:2.5rem; height:1px; background:var(--gold); }
   .sec-title{ font-family:var(--font-poster); font-weight:400; text-transform:uppercase; line-height:.86; letter-spacing:-.01em; font-size:clamp(3.2rem,11vw,8rem); margin:0; }
-  .sec-title .out{ color:transparent; -webkit-text-stroke:2px var(--text); }
+  .sec-title .out{ color:transparent; -webkit-text-stroke:1.5px var(--gold); }
   .sec-phrase{ font-family:var(--font-display); font-style:italic; font-size:clamp(1.05rem,2.2vw,1.5rem); color:var(--sand); margin:1rem 0 0; max-width:34ch; }
 
   .body{ padding:3.4rem 0 4.6rem; }
@@ -80,6 +80,11 @@
   .photo{ margin:0; position:relative; overflow:hidden; border:1px solid var(--line); }
   .photo img{ width:100%; height:100%; object-fit:cover; }
   .photo figcaption{ position:absolute; left:.7rem; bottom:.55rem; font-family:var(--font-mono); font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(242,237,228,.6); }
+
+  .yt-embed{ position:relative; width:100%; aspect-ratio:16/9; background:#000; margin:0 0 1.1rem; border:1px solid var(--line); }
+  .yt-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .yt-label{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin:0 0 1.6rem; }
+  .yt-label em{ color:var(--gold); font-style:normal; }
 
   /* ---------- clases ---------- */
   .clases-grid{ display:grid; grid-template-columns:1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
@@ -118,7 +123,7 @@
     <a class="brand" href="../" aria-label="Volver a la portada">NAYA<span>.</span></a>
     <ul>
       <li><a href="#musica">Música</a></li>
-      <li><a href="#produccion-cultural">Producción Cultural</a></li>
+      <li><a href="#gestion-cultural">Gestión Cultural</a></li>
       <li><a href="#clases">Clases</a></li>
       <li><a href="#investigacion">Investigación</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -141,19 +146,21 @@
     <div class="groups">
 
       <div>
-        <h3 class="gh">Presskit y CV</h3>
-        <a class="lk" href="https://drive.google.com/drive/folders/1nJHd9FtXH0w8OouhUIbKeW2jOkb_TmpY?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">Presskit 2025</span><span class="lk-d">Carpeta con material de prensa</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://github.com/ramironaya-bit/CV---artistico/blob/main/CV%20-%20artistico.pdf" target="_blank" rel="noopener"><span class="lk-t">CV artístico</span><span class="lk-d">PDF</span><span class="lk-a">↗</span></a>
+        <h3 class="gh">DJ</h3>
+        <div class="yt-embed"><iframe src="https://www.youtube.com/embed/lO1I1ZeL8Qc" title="Tiny SEKTA | La Pochi & AURINAYA" loading="lazy" allowfullscreen></iframe></div>
+        <p class="yt-label">Lo último: <em>Tiny SEKTA</em> · La Pochi &amp; AURINAYA</p>
+
+        <figure class="photo" style="aspect-ratio:4/3"><img src="assets/img/aurinaya.jpg" alt="" style="object-position:50% 30%"><figcaption>AURINAYA</figcaption></figure>
+        <p class="note" style="margin-top:.9rem">AURINAYA, dúo de electrónica (no hace live sets). Desde 2020 toca en clubes nocturnos y organiza eventos propios.</p>
+        <a class="lk" href="https://aurinaya.sekito.ar/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Sitio</span><span class="lk-d">aurinaya.sekito.ar</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.youtube.com/playlist?list=PLzBcQRXYLsbs_0x57uRxppeush0_SkAvW" target="_blank" rel="noopener"><span class="lk-t">DJ sets y live sets</span><span class="lk-d">Playlist en YouTube</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.instagram.com/aurinaya_/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Instagram</span><span class="lk-d">Dúo de electrónica, desde 2020</span><span class="lk-a">↗</span></a>
       </div>
 
       <div>
-        <h3 class="gh">DJ</h3>
-        <p class="note">AURINAYA es el dúo de electrónica con el que se hacen presentaciones y live sets: guitarras, sintetizadores y máquinas.</p>
-        <a class="lk" href="https://www.youtube.com/playlist?list=PLzBcQRXYLsbs_0x57uRxppeush0_SkAvW" target="_blank" rel="noopener"><span class="lk-t">DJ sets y live sets</span><span class="lk-d">Playlist en YouTube</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://youtu.be/pEg7eDkobTc" target="_blank" rel="noopener"><span class="lk-t">Set SCÁNDALO · 2023</span><span class="lk-d">YouTube</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://www.instagram.com/aurinaya_/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Instagram</span><span class="lk-d">Dúo de electrónica, desde 2021</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://linktr.ee/aurinaya" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Links</span><span class="lk-d">Linktree</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://aurinaya.sekito.ar/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Sitio</span><span class="lk-d">aurinaya.sekito.ar</span><span class="lk-a">↗</span></a>
+        <h3 class="gh">Presskit y CV</h3>
+        <a class="lk" href="https://drive.google.com/file/d/1iY4Q7qXFnSAofcNU7VrPwWtG09x48bo0/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">Presskit 2025</span><span class="lk-d">PDF</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://github.com/ramironaya-bit/CV---artistico/blob/main/CV%20-%20artistico.pdf" target="_blank" rel="noopener"><span class="lk-t">CV artístico</span><span class="lk-d">PDF</span><span class="lk-a">↗</span></a>
       </div>
 
       <div>
@@ -162,31 +169,37 @@
         <div class="lk plain"><span class="lk-t">“Reply”</span><span class="lk-d">Logia Records / Proton</span></div>
         <div class="lk plain"><span class="lk-t">“Hex &amp; Vibe”</span><span class="lk-d">Polimnia Records</span></div>
         <div class="lk plain"><span class="lk-t">“Anxiety in Bloom” · “Addicted Shadows”</span><span class="lk-d">SUEVI Records</span></div>
+        <div class="lk plain"><span class="lk-t">“Lonelier Than a Party”</span><span class="lk-d">SUEVI Records · próximamente</span></div>
       </div>
 
-      <div>
-        <h3 class="gh">Producción escénica</h3>
-        <a class="lk" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Obra escénica · música y DJ en vivo · Planta</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://drive.google.com/file/d/16IQ348mdfeLkISzxH6Ab6bv09mzJUmK0/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">VARDITO · 2024</span><span class="lk-d">Ciclo música y movimiento · dossier</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://www.alternativateatral.com/obra90951-vardito-experimentos-entre-musica-y-movimiento" target="_blank" rel="noopener"><span class="lk-t">VARDITO en Alternativa Teatral</span><span class="lk-d">Ficha del ciclo</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://plantainclan.com/vardito/" target="_blank" rel="noopener"><span class="lk-t">VARDITO en Planta</span><span class="lk-d">Ficha</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://www.youtube.com/watch?v=Kz19oqcizH0&list=PLzBcQRXYLsbsLhC6EbNYEdPawFd6skPKt" target="_blank" rel="noopener"><span class="lk-t">Música original y escénica</span><span class="lk-d">Registro en video · YouTube</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://panel.alternativateatral.com/persona482086-ramiro-naya-naya" target="_blank" rel="noopener"><span class="lk-t">Alternativa Teatral</span><span class="lk-d">Perfil</span><span class="lk-a">↗</span></a>
-        <div class="lk plain"><span class="lk-t">Extender el momento de placer</span><span class="lk-d">Obra escénica, junto a Camila Vega · música y proceso de creación</span></div>
-        <div class="lk plain"><span class="lk-t">El Secreto que lleva su nombre · 2022</span><span class="lk-d">Película documental · búsqueda sonora inicial · a estrenar</span></div>
-        <div class="lk plain"><span class="lk-t">Marte Lupardo · 2022</span><span class="lk-d">Playback y procesamiento vocal · Casa Nacional del Bicentenario</span></div>
-        <div class="lk plain"><span class="lk-t">Varietés de circo y artes escénicas</span><span class="lk-d">Edición de audio para números de distintas compañías</span></div>
+      <div class="g-wide">
+        <h3 class="gh">Música escénica</h3>
+        <div class="split">
+          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/ph1.jpg" alt="" style="object-position:50% 25%"><figcaption>VARDITO</figcaption></figure>
+          <div>
+            <a class="lk" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Obra escénica · música y DJ en vivo · Planta</span><span class="lk-a">↗</span></a>
+            <a class="lk" href="https://www.youtube.com/watch?v=Kz19oqcizH0&list=PLzBcQRXYLsbsLhC6EbNYEdPawFd6skPKt" target="_blank" rel="noopener"><span class="lk-t">Música original y escénica</span><span class="lk-d">Registro en video · YouTube</span><span class="lk-a">↗</span></a>
+            <a class="lk" href="https://panel.alternativateatral.com/persona482086-ramiro-naya-naya" target="_blank" rel="noopener"><span class="lk-t">Alternativa Teatral</span><span class="lk-d">Perfil</span><span class="lk-a">↗</span></a>
+            <div class="lk plain"><span class="lk-t">Extender el momento de placer</span><span class="lk-d">Obra escénica, junto a Camila Vega · música y proceso de creación</span></div>
+            <div class="lk plain"><span class="lk-t">El Secreto que lleva su nombre · 2022</span><span class="lk-d">Película documental · búsqueda sonora inicial · a estrenar</span></div>
+            <div class="lk plain"><span class="lk-t">Marte Lupardo · 2022</span><span class="lk-d">Playback y procesamiento vocal · Casa Nacional del Bicentenario</span></div>
+            <div class="lk plain"><span class="lk-t">Varietés de circo y artes escénicas</span><span class="lk-d">Edición de audio para números de distintas compañías</span></div>
+          </div>
+        </div>
       </div>
 
       <div class="g-wide">
         <h3 class="gh">Live set</h3>
         <div class="split">
-          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/ph1.jpg" alt="" style="object-position:50% 30%"><figcaption>Live set</figcaption></figure>
+          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/ph4.jpg" alt="" style="object-position:50% 35%"><figcaption>Live set</figcaption></figure>
           <div>
-            <p class="note">Sets en vivo con guitarra eléctrica, sintetizadores y máquinas, en formatos que cruzan la cabina y el escenario.</p>
+            <p class="note">Sets en vivo, o híbridos: se suman la guitarra eléctrica, los sintetizadores, las cajas de ritmos y máquinas, en formatos que combinan cabina, escenario y performance.</p>
             <div class="lk plain"><span class="lk-t">Live Set “La Biblioteca” · 2024</span><span class="lk-d">Presentación en formato live, producida por Unique Community y Smile Group</span></div>
             <div class="lk plain"><span class="lk-t">Sunset Naya · 2023</span><span class="lk-d">Live al atardecer en un aeródromo, en formato híbrido al aire libre</span></div>
             <a class="lk" href="https://www.youtube.com/playlist?list=PLzBcQRXYLsbs_0x57uRxppeush0_SkAvW" target="_blank" rel="noopener"><span class="lk-t">Ver sets en YouTube</span><span class="lk-d">Playlist</span><span class="lk-a">↗</span></a>
+            <a class="lk" href="https://drive.google.com/file/d/16IQ348mdfeLkISzxH6Ab6bv09mzJUmK0/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">VARDITO · 2024</span><span class="lk-d">Ciclo de música en vivo y danza · dossier</span><span class="lk-a">↗</span></a>
+            <a class="lk" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Música y DJ en vivo sobre el escenario</span><span class="lk-a">↗</span></a>
+            <div class="lk plain"><span class="lk-t">Extender el momento de placer</span><span class="lk-d">Música en vivo junto a Camila Vega</span></div>
           </div>
         </div>
       </div>
@@ -195,13 +208,13 @@
   </div></div>
 </section>
 
-<!-- ============ 02 · PRODUCCIÓN CULTURAL ============ -->
-<section id="produccion-cultural">
+<!-- ============ 02 · GESTIÓN CULTURAL ============ -->
+<section id="gestion-cultural">
   <header class="banner">
     <div class="banner-bg"><img src="assets/img/ph3.jpg" alt="" style="object-position:50% 40%"></div>
     <div class="wrap">
       <div class="sec-num">02</div>
-      <h2 class="sec-title">Producción<br><span class="out">Cultural</span></h2>
+      <h2 class="sec-title">Gestión<br><span class="out">Cultural</span></h2>
       <p class="sec-phrase">Construir experiencias colectivas: pistas, aulas, escenas.</p>
     </div>
   </header>
@@ -211,17 +224,18 @@
 
       <div>
         <h3 class="gh">Fiestas y productora</h3>
-        <a class="lk" href="https://www.instagram.com/seki.party/" target="_blank" rel="noopener"><span class="lk-t">SEKI · desde 2021</span><span class="lk-d">Fiesta techno kinky · Instagram</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.instagram.com/seki.party/" target="_blank" rel="noopener"><span class="lk-t">SEKI · desde 2023</span><span class="lk-d">Fiesta techno kinky · Instagram</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.sekito.ar/" target="_blank" rel="noopener"><span class="lk-t">SEKITO</span><span class="lk-d">La productora que nació de sostener SEKI</span><span class="lk-a">↗</span></a>
-        <div class="lk plain"><span class="lk-t">COLAPSO</span><span class="lk-d">La fiesta más reciente de SEKITO, construida sobre la idea del fin del mundo. Pensada como obra.</span></div>
-        <a class="lk" href="https://www.instagram.com/scandalo.party/" target="_blank" rel="noopener"><span class="lk-t">SCÁNDALO · 2024</span><span class="lk-d">Coproducción de dos fiestas, junto a AURINAYA · Instagram</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.instagram.com/p/DbWkjG_pAPl/" target="_blank" rel="noopener"><span class="lk-t">COLAPSO · nació en 2026</span><span class="lk-d">Construida sobre la idea del fin del mundo. Pensada como obra · Instagram</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.instagram.com/scandalo.party/" target="_blank" rel="noopener"><span class="lk-t">SCÁNDALO · desde 2021</span><span class="lk-d">Y otras coproducciones de fiestas electrónicas · Instagram</span><span class="lk-a">↗</span></a>
       </div>
 
       <div>
-        <h3 class="gh">Ciclos y clubes</h3>
-        <a class="lk" href="https://drive.google.com/file/d/16IQ348mdfeLkISzxH6Ab6bv09mzJUmK0/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">VARDITO · 2024</span><span class="lk-d">Ciclo experimental música y movimiento · dossier</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://www.instagram.com/vardo.vardito/" target="_blank" rel="noopener"><span class="lk-t">VARDITO / VARDO · Instagram</span><span class="lk-d">VARDO (2023): la fiesta nocturna de la que derivó el ciclo</span><span class="lk-a">↗</span></a>
-        <a class="lk" href="https://drive.google.com/file/d/1Ebs_89qbic7hUA0HwVVfBdJDHGwWQlDd/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">Perrakeo Club de Baile</span><span class="lk-d">Fiesta del mundo under · dossier</span><span class="lk-a">↗</span></a>
+        <h3 class="gh">Ciclos y otras fiestas</h3>
+        <a class="lk" href="https://drive.google.com/file/d/16IQ348mdfeLkISzxH6Ab6bv09mzJUmK0/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">VARDITO · 2024</span><span class="lk-d">Ciclo de música en vivo y danza · dossier</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.alternativateatral.com/obra90951-vardito-experimentos-entre-musica-y-movimiento" target="_blank" rel="noopener"><span class="lk-t">VARDITO en Alternativa Teatral</span><span class="lk-d">Ficha del ciclo</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.instagram.com/vardo.vardito/" target="_blank" rel="noopener"><span class="lk-t">VARDO</span><span class="lk-d">La fiesta de VARDITO (2023 y 2024) · Instagram</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://drive.google.com/file/d/1Ebs_89qbic7hUA0HwVVfBdJDHGwWQlDd/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">Perrakeo Club de Baile</span><span class="lk-d">Fiesta under de ritmos latinos · dossier</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.instagram.com/perrakeoclub/" target="_blank" rel="noopener"><span class="lk-t">Perrakeo · Instagram</span><span class="lk-d">El Maquinal, Otra Historia y otros espacios del circuito</span><span class="lk-a">↗</span></a>
       </div>
 
@@ -229,7 +243,6 @@
         <h3 class="gh">Y más</h3>
         <div class="lk plain"><span class="lk-t">Chicas Doradas Rock · agosto 2025</span><span class="lk-d">Producción de la fecha en Makena, dentro de la primera gira internacional de la banda</span></div>
         <div class="lk plain"><span class="lk-t">Levitar</span><span class="lk-d">Producción integral del videoclip</span></div>
-        <div class="lk plain"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Coproducción de una obra escénica con música y DJ en vivo · Planta</span></div>
       </div>
 
     </div>
@@ -251,12 +264,12 @@
     <div class="clases-grid">
       <a class="clase" href="clases-dj.html">
         <span class="n">01</span><span class="t">DJ</span>
-        <span class="d">Del primer contacto con una controladora a tocar afuera.</span>
+        <span class="d">Técnica, repertorio y lectura de pista — para arrancar o perfeccionarte.</span>
         <span class="go">Entrar →</span>
       </a>
       <div class="clase soon">
         <span class="n">02</span><span class="t">Producción</span>
-        <span class="d">Producción musical y de eventos.</span>
+        <span class="d">Producción musical.</span>
         <span class="go">Pronto</span>
       </div>
       <div class="clase soon">
@@ -299,7 +312,7 @@
 <!-- ============ 05 · CONTACTO ============ -->
 <section id="contacto" style="border-bottom:none">
   <header class="banner" style="min-height:48vh">
-    <div class="banner-bg"><img src="assets/img/ph4.jpg" alt="" style="object-position:50% 55%"></div>
+    <div class="banner-bg"><img src="assets/img/break-bg.jpg" alt="" style="object-position:50% 45%"></div>
     <div class="wrap">
       <div class="sec-num">05</div>
       <h2 class="sec-title">Contacto</h2>
