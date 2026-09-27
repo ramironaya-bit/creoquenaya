@@ -37,8 +37,9 @@
   nav.topnav{ position:sticky; top:0; z-index:60; background:rgba(11,10,10,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
   nav.topnav .inner{ max-width:var(--max); margin:0 auto; padding:.8rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.4rem; overflow-x:auto; scrollbar-width:none; }
   nav.topnav .inner::-webkit-scrollbar{ display:none; }
-  nav.topnav .brand{ font-family:var(--font-poster); font-size:1.3rem; letter-spacing:.03em; transform:skewX(-7deg); white-space:nowrap; text-decoration:none; }
-  nav.topnav .brand span{ color:var(--gold); }
+  nav.topnav .brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; white-space:nowrap; }
+  nav.topnav .brand img.avatar{ width:1.9rem; height:1.9rem; border-radius:50%; object-fit:cover; border:1px solid var(--line); }
+  nav.topnav .brand img.logo{ height:1.15rem; width:auto; display:block; }
   nav.topnav ul{ list-style:none; display:flex; gap:1.4rem; margin:0; padding:0; white-space:nowrap; }
   nav.topnav ul a{ text-decoration:none; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); padding:.25rem 0; border-bottom:1px solid transparent; }
   nav.topnav ul a:hover, nav.topnav ul a.active{ color:var(--text); border-color:var(--gold); }
@@ -120,7 +121,10 @@
 
 <nav class="topnav" aria-label="Secciones">
   <div class="inner">
-    <a class="brand" href="../" aria-label="Volver a la portada">NAYA<span>.</span></a>
+    <a class="brand" href="../" aria-label="Volver a la portada">
+      <img class="avatar" src="assets/img/avatar.jpg" alt="">
+      <img class="logo" src="assets/img/logo-naya.png" alt="NAYA">
+    </a>
     <ul>
       <li><a href="#musica">Música</a></li>
       <li><a href="#gestion-cultural">Gestión Cultural</a></li>
@@ -138,7 +142,7 @@
     <div class="wrap">
       <div class="sec-num">01</div>
       <h2 class="sec-title">Mú<span class="out">sica</span></h2>
-      <p class="sec-phrase">Música y sonido para el cuerpo en movimiento.</p>
+      <p class="sec-phrase">Divertido, versátil y pretencioso.</p>
     </div>
   </header>
 
@@ -150,8 +154,8 @@
         <div class="yt-embed"><iframe src="https://www.youtube.com/embed/lO1I1ZeL8Qc" title="Tiny SEKTA | La Pochi & AURINAYA" loading="lazy" allowfullscreen></iframe></div>
         <p class="yt-label">Lo último: <em>Tiny SEKTA</em> · La Pochi &amp; AURINAYA</p>
 
-        <figure class="photo" style="aspect-ratio:4/3"><img src="assets/img/aurinaya.jpg" alt="" style="object-position:50% 30%"><figcaption>AURINAYA</figcaption></figure>
-        <p class="note" style="margin-top:.9rem">AURINAYA, dúo de electrónica (no hace live sets). Desde 2020 toca en clubes nocturnos y organiza eventos propios.</p>
+        <figure class="photo" style="aspect-ratio:1/1"><img src="assets/img/aurinaya.jpg" alt="" style="object-position:50% 25%"><figcaption>AURINAYA</figcaption></figure>
+        <p class="note" style="margin-top:.9rem">AURINAYA, dúo de electrónica. Desde 2020 toca en clubes nocturnos y organiza eventos propios.</p>
         <a class="lk" href="https://aurinaya.sekito.ar/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Sitio</span><span class="lk-d">aurinaya.sekito.ar</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.youtube.com/playlist?list=PLzBcQRXYLsbs_0x57uRxppeush0_SkAvW" target="_blank" rel="noopener"><span class="lk-t">DJ sets y live sets</span><span class="lk-d">Playlist en YouTube</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.instagram.com/aurinaya_/" target="_blank" rel="noopener"><span class="lk-t">AURINAYA · Instagram</span><span class="lk-d">Dúo de electrónica, desde 2020</span><span class="lk-a">↗</span></a>
@@ -172,26 +176,21 @@
         <div class="lk plain"><span class="lk-t">“Lonelier Than a Party”</span><span class="lk-d">SUEVI Records · próximamente</span></div>
       </div>
 
-      <div class="g-wide">
+      <div>
         <h3 class="gh">Música escénica</h3>
-        <div class="split">
-          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/ph1.jpg" alt="" style="object-position:50% 25%"><figcaption>VARDITO</figcaption></figure>
-          <div>
-            <a class="lk" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Obra escénica · música y DJ en vivo · Planta</span><span class="lk-a">↗</span></a>
-            <a class="lk" href="https://www.youtube.com/watch?v=Kz19oqcizH0&list=PLzBcQRXYLsbsLhC6EbNYEdPawFd6skPKt" target="_blank" rel="noopener"><span class="lk-t">Música original y escénica</span><span class="lk-d">Registro en video · YouTube</span><span class="lk-a">↗</span></a>
-            <a class="lk" href="https://panel.alternativateatral.com/persona482086-ramiro-naya-naya" target="_blank" rel="noopener"><span class="lk-t">Alternativa Teatral</span><span class="lk-d">Perfil</span><span class="lk-a">↗</span></a>
-            <div class="lk plain"><span class="lk-t">Extender el momento de placer</span><span class="lk-d">Obra escénica, junto a Camila Vega · música y proceso de creación</span></div>
-            <div class="lk plain"><span class="lk-t">El Secreto que lleva su nombre · 2022</span><span class="lk-d">Película documental · búsqueda sonora inicial · a estrenar</span></div>
-            <div class="lk plain"><span class="lk-t">Marte Lupardo · 2022</span><span class="lk-d">Playback y procesamiento vocal · Casa Nacional del Bicentenario</span></div>
-            <div class="lk plain"><span class="lk-t">Varietés de circo y artes escénicas</span><span class="lk-d">Edición de audio para números de distintas compañías</span></div>
-          </div>
-        </div>
+        <a class="lk" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Obra escénica · música y DJ en vivo · Planta</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://www.youtube.com/watch?v=Kz19oqcizH0&list=PLzBcQRXYLsbsLhC6EbNYEdPawFd6skPKt" target="_blank" rel="noopener"><span class="lk-t">Música original y escénica</span><span class="lk-d">Registro en video · YouTube</span><span class="lk-a">↗</span></a>
+        <a class="lk" href="https://panel.alternativateatral.com/persona482086-ramiro-naya-naya" target="_blank" rel="noopener"><span class="lk-t">Alternativa Teatral</span><span class="lk-d">Perfil</span><span class="lk-a">↗</span></a>
+        <div class="lk plain"><span class="lk-t">Extender el momento de placer</span><span class="lk-d">Obra escénica, junto a Camila Vega · música y proceso de creación</span></div>
+        <div class="lk plain"><span class="lk-t">El Secreto que lleva su nombre · 2022</span><span class="lk-d">Película documental · búsqueda sonora inicial · a estrenar</span></div>
+        <div class="lk plain"><span class="lk-t">Marte Lupardo · 2022</span><span class="lk-d">Playback y procesamiento vocal · Casa Nacional del Bicentenario</span></div>
+        <div class="lk plain"><span class="lk-t">Varietés de circo y artes escénicas</span><span class="lk-d">Edición de audio para números de distintas compañías</span></div>
       </div>
 
       <div class="g-wide">
         <h3 class="gh">Live set</h3>
         <div class="split">
-          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/ph4.jpg" alt="" style="object-position:50% 35%"><figcaption>Live set</figcaption></figure>
+          <figure class="photo" style="aspect-ratio:4/5; max-height:520px"><img src="assets/img/liveset-rig.jpg" alt="" style="object-position:50% 20%"><figcaption>Live set</figcaption></figure>
           <div>
             <p class="note">Sets en vivo, o híbridos: se suman la guitarra eléctrica, los sintetizadores, las cajas de ritmos y máquinas, en formatos que combinan cabina, escenario y performance.</p>
             <div class="lk plain"><span class="lk-t">Live Set “La Biblioteca” · 2024</span><span class="lk-d">Presentación en formato live, producida por Unique Community y Smile Group</span></div>
@@ -211,7 +210,7 @@
 <!-- ============ 02 · GESTIÓN CULTURAL ============ -->
 <section id="gestion-cultural">
   <header class="banner">
-    <div class="banner-bg"><img src="assets/img/ph3.jpg" alt="" style="object-position:50% 40%"></div>
+    <div class="banner-bg"><img src="assets/img/gestion-colapso.jpg" alt="" style="object-position:50% 30%"></div>
     <div class="wrap">
       <div class="sec-num">02</div>
       <h2 class="sec-title">Gestión<br><span class="out">Cultural</span></h2>
