@@ -91,18 +91,23 @@
   .lk .sub a:hover{ color:var(--text); }
 
   .photo{ margin:0; position:relative; }
-  .polaroid{ background:#efe9dd; padding:9px 9px 30px; box-shadow:0 16px 34px rgba(0,0,0,.5); transform:rotate(-2deg); width:min(300px,78vw); }
+  .polaroid{ background:#efe9dd; padding:9px 9px 30px; box-shadow:0 16px 34px rgba(0,0,0,.5); transform:rotate(-2deg); width:min(300px,78vw); align-self:start; }
   .polaroid img{ width:100%; height:auto; }
   .polaroid figcaption{ position:absolute; left:0; right:0; bottom:8px; text-align:center; color:#4a3f30; font-family:var(--font-mono); font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; }
 
   /* ---------- clases ---------- */
   .clases-grid{ display:grid; grid-template-columns:1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
   @media (min-width:700px){ .clases-grid{ grid-template-columns:repeat(2,1fr); } }
-  .clase{ background:var(--bg); padding:1.6rem 1.3rem 1.4rem; display:flex; flex-direction:column; gap:.5rem; min-height:10rem; opacity:.55; }
+  .clases-grid + .gh{ margin-top:2.6rem; }
+  @media (min-width:900px){ .clases-grid.tres{ grid-template-columns:repeat(3,1fr); } }
+  .clase{ background:var(--bg); padding:1.6rem 1.3rem 1.4rem; display:flex; flex-direction:column; gap:.5rem; min-height:10rem; text-decoration:none; transition:background .15s; }
+  a.clase:hover{ background:var(--bg-raised); }
   .clase .n{ font-family:var(--font-mono); font-size:.68rem; color:var(--text-faint); }
   .clase .t{ font-family:var(--font-poster); text-transform:uppercase; font-size:1.7rem; line-height:1; }
+  .clase .t.largo{ font-size:1.3rem; line-height:1.08; }
+  a.clase:hover .t{ color:var(--gold); }
   .clase .d{ font-size:.85rem; color:var(--text-muted); }
-  .clase .go{ margin-top:auto; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-faint); }
+  .clase .go{ margin-top:auto; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
 
   /* ---------- contacto ---------- */
   .c-list{ display:flex; flex-direction:column; gap:1.3rem; }
@@ -150,13 +155,15 @@
     <div class="cols photo-left">
       <figure class="photo polaroid"><img src="assets/img/academico-duo.jpg" alt=""><figcaption>Encuentro académico</figcaption></figure>
       <div>
-        <div class="lk plain"><span class="lk-t">Universidad Pedagógica Nacional (UNIPE)</span><span class="lk-m">2021 — 2024</span><span class="lk-d">Docente titular de la Licenciatura en Educación y Formación Técnica y Profesional con orientación en gestión, y de la Tecnicatura Superior en Educación Técnico Profesional.</span></div>
-        <h3 class="gh" style="margin-top:1.6rem">Materias</h3>
-        <div class="lk plain"><span class="lk-t">Sistemas Productivos en Argentina</span></div>
-        <div class="lk plain"><span class="lk-t">Contexto y Tendencias de la Educación para el Trabajo</span></div>
-        <div class="lk plain"><span class="lk-t">Prácticas Profesionalizantes</span></div>
-        <h3 class="gh" style="margin-top:1.6rem">Nivel secundario</h3>
-        <div class="lk plain"><span class="lk-t">Docente titular de Historia</span><span class="lk-m">2013 — 2023</span><span class="lk-d">Diez años a cargo de las horas curriculares de Historia, de 2.º a 5.º año.</span></div>
+        <h3 class="gh">Universitaria</h3>
+        <div class="lk plain"><span class="lk-t">Universidad Pedagógica Nacional (UNIPE)</span><span class="lk-m">2021 — 2024</span><span class="lk-d">Docente titular de la Licenciatura en Educación y Formación Técnica y Profesional, con orientación en gestión.</span></div>
+
+        <h3 class="gh" style="margin-top:1.8rem">Superior</h3>
+        <div class="lk plain"><span class="lk-t">Universidad Pedagógica Nacional (UNIPE)</span><span class="lk-m">2021 — 2024</span><span class="lk-d">Docente titular de la Tecnicatura Superior en Educación Técnico Profesional.</span></div>
+
+        <h3 class="gh" style="margin-top:1.8rem">Secundaria</h3>
+        <div class="lk plain"><span class="lk-t">Instituto Ricardo Güiraldes, Banfield</span><span class="lk-m">2013 — 2023</span><span class="lk-d">Docente titular de Historia, de 2.º a 5.º año. Diez años.</span></div>
+        <div class="lk plain"><span class="lk-t">Escuela Superior de Comercio Carlos Pellegrini (UBA)</span><span class="lk-m">2015</span><span class="lk-d">Prácticas docentes de nivel medio: Sociología, 5.º año.</span></div>
       </div>
     </div>
   </div></div>
@@ -262,16 +269,35 @@
       <h2 class="sec-title">Clases</h2>
     </div>
     <div class="clases-grid">
-      <div class="clase">
+      <a class="clase" href="clase.html?m=sociologia">
         <span class="n">01</span><span class="t">Sociología</span>
         <span class="d">Herramientas para leer lo social.</span>
-        <span class="go">Pronto</span>
-      </div>
-      <div class="clase">
+        <span class="go">Entrar →</span>
+      </a>
+      <a class="clase" href="clase.html?m=historia">
         <span class="n">02</span><span class="t">Historia</span>
         <span class="d">Clases de historia, nivel secundario y más.</span>
-        <span class="go">Pronto</span>
-      </div>
+        <span class="go">Entrar →</span>
+      </a>
+    </div>
+
+    <h3 class="gh">UNIPE · materias</h3>
+    <div class="clases-grid tres">
+      <a class="clase" href="clase.html?m=sistemas-productivos">
+        <span class="n">03</span><span class="t largo">Sistemas Productivos en Argentina</span>
+        <span class="d">UNIPE.</span>
+        <span class="go">Entrar →</span>
+      </a>
+      <a class="clase" href="clase.html?m=contexto-tendencias">
+        <span class="n">04</span><span class="t largo">Contexto y Tendencias de la Educación para el Trabajo</span>
+        <span class="d">UNIPE.</span>
+        <span class="go">Entrar →</span>
+      </a>
+      <a class="clase" href="clase.html?m=practicas-profesionalizantes">
+        <span class="n">05</span><span class="t largo">Prácticas Profesionalizantes</span>
+        <span class="d">UNIPE.</span>
+        <span class="go">Entrar →</span>
+      </a>
     </div>
   </div></div>
 </section>
