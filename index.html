@@ -88,6 +88,16 @@
   .yt-label{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin:0; }
   .yt-label em{ color:var(--gold); font-style:normal; }
 
+  /* ---------- marcas (gestión cultural) ---------- */
+  .brands{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:3.2rem; }
+  @media (min-width:900px){ .brands{ grid-template-columns:repeat(4,1fr); } }
+  .brand-tile{ background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.1rem; padding:2.2rem 1rem 1.2rem; min-height:12rem; text-decoration:none; transition:background .15s; }
+  .brand-tile:hover, .brand-tile:focus-visible{ background:var(--bg-raised); }
+  .brand-tile img{ height:4rem; width:auto; max-width:78%; object-fit:contain; transition:transform .2s; }
+  .brand-tile:hover img{ transform:scale(1.05); }
+  .brand-tile .cap{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-faint); transition:color .15s; }
+  .brand-tile:hover .cap{ color:var(--gold); }
+
   /* ---------- clases ---------- */
   .clases-grid{ display:grid; grid-template-columns:1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
   @media (min-width:700px){ .clases-grid{ grid-template-columns:repeat(2,1fr); } }
@@ -229,6 +239,13 @@
   </header>
 
   <div class="body"><div class="wrap">
+    <div class="brands">
+      <a class="brand-tile" href="https://www.instagram.com/seki.party/" target="_blank" rel="noopener"><img src="assets/img/logos/seki.png" alt="SEKI Party"><span class="cap">SEKI · desde 2023</span></a>
+      <a class="brand-tile" href="https://www.sekito.ar/" target="_blank" rel="noopener"><img src="assets/img/logos/abanico.png" alt="SEKITO"><span class="cap">SEKITO · productora</span></a>
+      <a class="brand-tile" href="https://www.instagram.com/p/DbWkjG_pAPl/" target="_blank" rel="noopener"><img src="assets/img/logos/colapso.png" alt="COLAPSO"><span class="cap">COLAPSO · 2026</span></a>
+      <a class="brand-tile" href="https://www.instagram.com/vardo.vardito/" target="_blank" rel="noopener"><img src="assets/img/logos/vardito.png" alt="VARDITO"><span class="cap">VARDITO · 2024</span></a>
+    </div>
+
     <div class="groups">
 
       <div>
