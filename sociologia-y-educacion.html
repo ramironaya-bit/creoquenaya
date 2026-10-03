@@ -113,6 +113,7 @@
   .c-list{ display:flex; flex-direction:column; gap:1.3rem; }
   .c-list a{ font-family:var(--font-display); font-size:clamp(1.4rem,4vw,2.3rem); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:.5rem; align-self:flex-start; transition:color .15s,border-color .15s; }
   .c-list a:hover{ color:var(--gold); border-color:var(--gold-soft); }
+  .c-list.compact a{ font-size:clamp(1.1rem,3.6vw,1.7rem); overflow-wrap:anywhere; }
   .c-list .k{ display:block; font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-faint); margin-bottom:.3rem; }
 
   footer{ text-align:center; padding:2rem 1.5rem 2.4rem; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); }
@@ -332,9 +333,15 @@
       <div class="sec-num">06</div>
       <h2 class="sec-title">Contacto</h2>
     </div>
-    <div class="c-list">
-      <a href="mailto:ramironaya@gmail.com"><span class="k">Mail</span>ramironaya@gmail.com</a>
-      <a href="https://instagram.com/creoquenaya" target="_blank" rel="noopener"><span class="k">Instagram</span>@creoquenaya</a>
+    <div class="cols">
+      <div class="c-list compact">
+        <a href="mailto:ramiro.naya@unipe.edu.ar"><span class="k">Mail</span>ramiro.naya@unipe.edu.ar</a>
+        <a href="mailto:ramiro.naya@educacion.gob.ar"><span class="k">Mail</span>ramiro.naya@educacion.gob.ar</a>
+        <a href="mailto:ramiro.naya@edu.bue.ar"><span class="k">Mail</span>ramiro.naya@edu.bue.ar</a>
+      </div>
+      <div class="c-list compact">
+        <a href="https://ar.linkedin.com/in/ramironaya" target="_blank" rel="noopener"><span class="k">LinkedIn</span>ramironaya</a>
+      </div>
     </div>
   </div></div>
 </section>
