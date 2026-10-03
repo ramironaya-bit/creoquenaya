@@ -15,16 +15,16 @@
 <meta property="og:url" content="https://ramironaya-bit.github.io/creoquenaya/sociologia-y-educacion.html">
 <meta property="og:image" content="https://ramironaya-bit.github.io/assets/portada.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0a0a">
+<meta name="theme-color" content="#F4EFE6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0b0a0a; --bg-raised:#15120f; --bg-feature:#1a1108;
-    --line:#2e2620; --line-soft:#241e19;
-    --text:#f2ede4; --text-muted:#a89d8e; --text-faint:#6f665c;
-    --gold:#e8b04a; --gold-soft:#8a6c2f; --terra:#c14a63; --terra-deep:#7c2f42; --sand:#cbb389;
+    --bg:#F4EFE6; --bg-raised:#EBE4D6; --bg-feature:#EDE6D8;
+    --line:#D9D1C3; --line-soft:#E4DDCF;
+    --text:#1E1B18; --text-muted:#5F584F; --text-faint:#7A7368;
+    --accent:#1F3A5F; --accent-soft:#8FA3BF; --terra:#B5563A; --terra-deep:#8E4129; --lede:#3E3A34;
     --max:1180px;
     --font-display:"Fraunces",ui-serif,Georgia,serif;
     --font-poster:"Anton",ui-sans-serif,sans-serif;
@@ -42,32 +42,32 @@
   @media (min-width:900px){ .wrap{ padding:0 3rem; } }
 
   /* ---------- nav ---------- */
-  nav.topnav{ position:sticky; top:0; z-index:60; background:rgba(11,10,10,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  nav.topnav{ position:sticky; top:0; z-index:60; background:rgba(244,239,230,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
   nav.topnav .inner{ max-width:var(--max); margin:0 auto; padding:.8rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.4rem; overflow-x:auto; scrollbar-width:none; }
   nav.topnav .inner::-webkit-scrollbar{ display:none; }
   nav.topnav .brand{ font-family:var(--font-poster); font-size:1.15rem; letter-spacing:.04em; text-transform:uppercase; transform:skewX(-7deg); white-space:nowrap; text-decoration:none; }
-  nav.topnav .brand span{ color:var(--gold); }
+  nav.topnav .brand span{ color:var(--accent); }
   nav.topnav ul{ list-style:none; display:flex; gap:1.4rem; margin:0; padding:0; white-space:nowrap; }
   nav.topnav ul a{ text-decoration:none; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); padding:.25rem 0; border-bottom:1px solid transparent; }
-  nav.topnav ul a:hover, nav.topnav ul a.active{ color:var(--text); border-color:var(--gold); }
+  nav.topnav ul a:hover, nav.topnav ul a.active{ color:var(--text); border-color:var(--accent); }
 
   /* ---------- portada de la página ---------- */
   header.intro{ position:relative; background:var(--bg-feature); border-bottom:1px solid var(--line); }
   header.intro .wrap{ padding-top:7rem; padding-bottom:3.4rem; }
-  .kicker{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); display:flex; align-items:center; gap:.7rem; margin-bottom:1rem; }
-  .kicker::before{ content:""; width:2.5rem; height:1px; background:var(--gold); }
+  .kicker{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:.7rem; margin-bottom:1rem; }
+  .kicker::before{ content:""; width:2.5rem; height:1px; background:var(--accent); }
   .title{ font-family:var(--font-poster); font-weight:400; text-transform:uppercase; line-height:1.02; letter-spacing:-.01em; font-size:clamp(3rem,10vw,7.2rem); margin:0; }
-  .title .out{ color:transparent; -webkit-text-stroke:1.5px var(--gold); }
-  .lede{ font-family:var(--font-display); font-style:italic; font-size:clamp(1.05rem,2.2vw,1.45rem); color:var(--sand); margin:1.2rem 0 0; max-width:38ch; }
+  .title .out{ color:transparent; -webkit-text-stroke:1.6px var(--accent); }
+  .lede{ font-family:var(--font-display); font-style:italic; font-size:clamp(1.05rem,2.2vw,1.45rem); color:var(--lede); margin:1.2rem 0 0; max-width:38ch; }
   .bridge{ margin:2.2rem 0 0; max-width:60ch; color:var(--text-muted); border-left:2px solid var(--terra); padding-left:1rem; }
-  .bridge a{ color:var(--gold); text-underline-offset:3px; }
+  .bridge a{ color:var(--accent); text-underline-offset:3px; }
 
   /* ---------- secciones de texto ---------- */
   section{ position:relative; scroll-margin-top:3.2rem; border-bottom:1px solid var(--line); }
   .body{ padding:3.6rem 0 4.4rem; }
   .sec-head{ margin-bottom:2.2rem; }
-  .sec-num{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.2em; color:var(--gold); display:flex; align-items:center; gap:.7rem; margin-bottom:.6rem; }
-  .sec-num::before{ content:""; width:2.5rem; height:1px; background:var(--gold); }
+  .sec-num{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:.7rem; margin-bottom:.6rem; }
+  .sec-num::before{ content:""; width:2.5rem; height:1px; background:var(--accent); }
   .sec-title{ font-family:var(--font-poster); font-weight:400; text-transform:uppercase; line-height:.9; font-size:clamp(2.4rem,6vw,4.2rem); margin:0; }
 
   .cols{ display:grid; grid-template-columns:1fr; gap:3rem; }
@@ -81,17 +81,17 @@
   .lk-t{ font-family:var(--font-display); font-size:1.15rem; line-height:1.25; }
   .lk-d{ grid-column:1; font-size:.86rem; color:var(--text-muted); max-width:62ch; }
   .lk-m{ grid-column:1; font-family:var(--font-mono); font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); margin-top:.15rem; }
-  .lk-a{ grid-column:2; grid-row:1 / span 3; align-self:center; font-family:var(--font-mono); color:var(--gold-soft); transition:transform .15s,color .15s; }
-  a.lk:hover .lk-t{ color:var(--gold); }
-  a.lk:hover .lk-a{ color:var(--gold); transform:translate(2px,-2px); }
+  .lk-a{ grid-column:2; grid-row:1 / span 3; align-self:center; font-family:var(--font-mono); color:var(--accent-soft); transition:transform .15s,color .15s; }
+  a.lk:hover .lk-t{ color:var(--accent); }
+  a.lk:hover .lk-a{ color:var(--accent); transform:translate(2px,-2px); }
   .lk.plain{ grid-template-columns:1fr; }
   .lk.plain .lk-t{ color:var(--text); }
   .lk .sub{ grid-column:1; display:flex; flex-wrap:wrap; gap:.4rem .9rem; margin-top:.3rem; }
-  .lk .sub a{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-soft); }
+  .lk .sub a{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft); }
   .lk .sub a:hover{ color:var(--text); }
 
   .photo{ margin:0; position:relative; }
-  .polaroid{ background:#efe9dd; padding:9px 9px 30px; box-shadow:0 16px 34px rgba(0,0,0,.5); transform:rotate(-2deg); width:min(300px,78vw); align-self:start; }
+  .polaroid{ background:#FBF8F2; padding:9px 9px 30px; box-shadow:0 10px 26px rgba(30,27,24,.22); transform:rotate(-2deg); width:min(300px,78vw); align-self:start; }
   .polaroid img{ width:100%; height:auto; }
   .polaroid figcaption{ position:absolute; left:0; right:0; bottom:8px; text-align:center; color:#4a3f30; font-family:var(--font-mono); font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; }
 
@@ -105,20 +105,20 @@
   .clase .n{ font-family:var(--font-mono); font-size:.68rem; color:var(--text-faint); }
   .clase .t{ font-family:var(--font-poster); text-transform:uppercase; font-size:1.7rem; line-height:1; }
   .clase .t.largo{ font-size:1.3rem; line-height:1.08; }
-  a.clase:hover .t{ color:var(--gold); }
+  a.clase:hover .t{ color:var(--accent); }
   .clase .d{ font-size:.85rem; color:var(--text-muted); }
-  .clase .go{ margin-top:auto; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
+  .clase .go{ margin-top:auto; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
 
   /* ---------- contacto ---------- */
   .c-list{ display:flex; flex-direction:column; gap:1.3rem; }
   .c-list a{ font-family:var(--font-display); font-size:clamp(1.4rem,4vw,2.3rem); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:.5rem; align-self:flex-start; transition:color .15s,border-color .15s; }
-  .c-list a:hover{ color:var(--gold); border-color:var(--gold-soft); }
+  .c-list a:hover{ color:var(--accent); border-color:var(--accent-soft); }
   .c-list.compact a{ font-size:clamp(1.1rem,3.6vw,1.7rem); overflow-wrap:anywhere; }
   .c-list .k{ display:block; font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-faint); margin-bottom:.3rem; }
 
   footer{ text-align:center; padding:2rem 1.5rem 2.4rem; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); }
   footer a{ color:var(--text-muted); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:.1rem; margin-left:.4rem; transition:color .15s,border-color .15s; }
-  footer a:hover{ color:var(--gold); border-color:var(--gold-soft); }
+  footer a:hover{ color:var(--accent); border-color:var(--accent-soft); }
 </style>
 </head>
 <body>
@@ -154,7 +154,7 @@
       <h2 class="sec-title">Docencia</h2>
     </div>
     <div class="cols photo-left">
-      <figure class="photo polaroid"><img src="assets/img/academico-duo.jpg" alt=""><figcaption>Encuentro académico</figcaption></figure>
+      <figure class="photo polaroid"><img src="assets/img/academico-tinta.jpg" alt=""><figcaption>Encuentro académico</figcaption></figure>
       <div>
         <h3 class="gh">Universitaria</h3>
         <div class="lk plain"><span class="lk-t">Universidad Pedagógica Nacional (UNIPE)</span><span class="lk-m">2021 — 2024</span><span class="lk-d">Docente titular de la Licenciatura en Educación y Formación Técnica y Profesional, con orientación en gestión.</span></div>
