@@ -65,10 +65,15 @@
 
 <script>
   // Cada clase tiene su propia lista de claves (hash SHA-256 -> dirección de la clase).
-  // Mientras "accesos" esté vacío, ninguna clave entra.
+  // Además, la clave UNIVERSAL entra a toda clase que tenga "destino".
   var ACAD = "sociologia-y-educacion.html#clases";
+  var PROD = "../Clases/produccion/";
+  // Clave universal: entra a cualquier clase que tenga "destino". (Hoy: "naya".)
+  var UNIVERSAL = { "02b1d1fb5c8017c78e62504f8128ad5c5628af9b5c1b7f7278a37bd71c879940":true };
   var CLASES = {
-    "produccion":                  { eyebrow:"Clases · Producción",  title:"Producción", back:"./#clases", site:"NAYA", accesos:{} },
+    "produccion":                  { eyebrow:"Clases · Producción",  title:"Producción", back:"./#clases", site:"NAYA", destino:PROD, accesos:{} },
+    "digitakt-ii":                 { eyebrow:"Clases · Producción",  title:"Digitakt II", back:PROD, site:"NAYA", destino:PROD+"digitakt-ii/", accesos:{} },
+    "ableton":                     { eyebrow:"Clases · Producción",  title:"Ableton Live", back:PROD, site:"NAYA", destino:PROD+"ableton/", accesos:{} },
     "sociologia":                  { eyebrow:"Clases · Sociología",  title:"Sociología", back:ACAD, site:"Ramiro Naya", accesos:{} },
     "historia":                    { eyebrow:"Clases · Historia",    title:"Historia",   back:ACAD, site:"Ramiro Naya", accesos:{} },
     "sistemas-productivos":        { eyebrow:"UNIPE", title:"Sistemas Productivos en Argentina", back:ACAD, site:"Ramiro Naya", accesos:{} },
@@ -97,7 +102,8 @@
     var clave = document.getElementById("k").value.trim().toLowerCase();
     if(!(window.crypto && crypto.subtle)){ msg.textContent = "Este navegador no permite verificar la clave."; return; }
     sha256(clave).then(function(h){
-      if(clase.accesos[h]){ msg.style.color = "var(--accent)"; msg.textContent = "Entrando…"; window.location.href = clase.accesos[h]; }
+      var ir = clase.accesos[h] || (UNIVERSAL[h] && clase.destino);
+      if(ir){ msg.style.color = "var(--accent)"; msg.textContent = "Entrando…"; window.location.href = ir; }
       else { msg.style.color = "var(--terra)"; msg.textContent = "Clave incorrecta."; }
     });
   });
