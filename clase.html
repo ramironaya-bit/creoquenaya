@@ -21,7 +21,6 @@
     --font-body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
     --font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",monospace;
   }
-  body.acad{ --bg:#F4EFE6; --bg-raised:#EBE4D6; --line:#D9D1C3; --text:#1E1B18; --text-muted:#5F584F; --text-faint:#7A7368; --accent:#1F3A5F; --accent-soft:#8FA3BF; --on-accent:#F4EFE6; --terra:#B5563A; --lede:#3E3A34; }
   *,*::before,*::after{ box-sizing:border-box; }
   body{ margin:0; min-height:100vh; display:flex; flex-direction:column; background:var(--bg); color:var(--text); font-family:var(--font-body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   a{ color:inherit; }
@@ -66,29 +65,22 @@
 <script>
   // Cada clase tiene su propia lista de claves (hash SHA-256 -> dirección de la clase).
   // Además, la clave UNIVERSAL entra a toda clase que tenga "destino".
-  var ACAD = "sociologia-y-educacion.html#clases";
   var PROD = "../Clases/produccion/";
   // Clave universal: entra a cualquier clase que tenga "destino". (Hoy: "naya".)
   var UNIVERSAL = { "02b1d1fb5c8017c78e62504f8128ad5c5628af9b5c1b7f7278a37bd71c879940":true };
   var CLASES = {
     "produccion":                  { eyebrow:"Clases · Producción",  title:"Producción", back:"./#clases", site:"NAYA", destino:PROD, accesos:{} },
     "digitakt-ii":                 { eyebrow:"Clases · Producción",  title:"Digitakt II", back:PROD, site:"NAYA", destino:PROD+"digitakt-ii/", accesos:{} },
-    "ableton":                     { eyebrow:"Clases · Producción",  title:"Ableton Live", back:PROD, site:"NAYA", destino:PROD+"ableton/", accesos:{} },
-    "sociologia":                  { eyebrow:"Clases · Sociología",  title:"Sociología", back:ACAD, site:"Ramiro Naya", accesos:{} },
-    "historia":                    { eyebrow:"Clases · Historia",    title:"Historia",   back:ACAD, site:"Ramiro Naya", accesos:{} },
-    "sistemas-productivos":        { eyebrow:"UNIPE", title:"Sistemas Productivos en Argentina", back:ACAD, site:"Ramiro Naya", accesos:{} },
-    "contexto-tendencias":         { eyebrow:"UNIPE", title:"Contexto y Tendencias de la Educación para el Trabajo", back:ACAD, site:"Ramiro Naya", accesos:{} },
-    "practicas-profesionalizantes":{ eyebrow:"UNIPE", title:"Prácticas Profesionalizantes", back:ACAD, site:"Ramiro Naya", accesos:{} }
+    "ableton":                     { eyebrow:"Clases · Producción",  title:"Ableton Live", back:PROD, site:"NAYA", destino:PROD+"ableton/", accesos:{} }
   };
   var slug = (new URLSearchParams(location.search).get("m") || "").toLowerCase();
-  var clase = CLASES[slug] || { eyebrow:"Clases", title:"Clases", back:"./#clases", site:"Ramiro Naya", accesos:{} };
+  var clase = CLASES[slug] || { eyebrow:"Clases", title:"Clases", back:"./#clases", site:"NAYA", accesos:{} };
 
   document.title = clase.title + " — Clases";
   document.getElementById("eyebrow").textContent = clase.eyebrow;
   var h1 = document.getElementById("title"); h1.textContent = clase.title; if(clase.title.length > 16) h1.className = "long";
   document.getElementById("back").setAttribute("href", clase.back);
   document.getElementById("site").textContent = clase.site;
-  if(clase.site === "Ramiro Naya") document.body.classList.add("acad");
 
   function sha256(text){
     var data = new TextEncoder().encode(text);
