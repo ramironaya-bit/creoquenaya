@@ -117,6 +117,14 @@
   a.clase:hover .t{ color:var(--gold); }
   .clase .d{ font-size:.85rem; color:var(--text-muted); }
   .clase .go{ margin-top:auto; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
+  .clave{ margin-top:2.2rem; max-width:30rem; }
+  .clave label{ display:block; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--text-faint); margin-bottom:.6rem; }
+  .clave .row{ display:flex; gap:.6rem; flex-wrap:wrap; }
+  .clave input{ flex:1 1 12rem; font:inherit; font-family:var(--font-mono); font-size:.95rem; color:var(--text); background:var(--bg-raised); border:1px solid var(--line); padding:.75rem 1rem; border-radius:0; }
+  .clave input:focus{ outline:none; border-color:var(--gold-soft); }
+  .clave button{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); background:transparent; border:1px solid var(--gold-soft); padding:.75rem 1.2rem; cursor:pointer; transition:background .15s,color .15s; }
+  .clave button:hover{ background:var(--gold); color:#1a1408; }
+  .clave .msg{ min-height:1.4rem; margin:.7rem 0 0; font-family:var(--font-mono); font-size:.78rem; color:var(--terra); }
   .clase.soon{ opacity:.55; }
   .clase.soon .go{ color:var(--text-faint); }
 
@@ -291,7 +299,7 @@
     <div class="wrap">
       <div class="sec-num">03</div>
       <h2 class="sec-title">Clases</h2>
-      <p class="sec-phrase">La pista y el aula son el mismo terreno.</p>
+      <p class="sec-phrase">La pista y el aula como el mismo terreno.</p>
     </div>
   </header>
 
@@ -308,6 +316,15 @@
         <span class="go">Entrar →</span>
       </a>
     </div>
+
+    <form class="clave" id="claveForm" autocomplete="off">
+      <label for="claveInput">¿Ya tenés tu clave?</label>
+      <div class="row">
+        <input id="claveInput" type="password" placeholder="tu clave" aria-label="Clave" required>
+        <button type="submit">Entrar</button>
+      </div>
+      <p class="msg" id="claveMsg" role="status" aria-live="polite"></p>
+    </form>
   </div></div>
 </section>
 
@@ -338,6 +355,24 @@
 <footer>NAYA — Buenos Aires · 2026 <a href="../sociologia-y-educacion/">Ramiro Naya · Sociología y educación →</a></footer>
 
 <script>
+  // Clave de acceso rápido. Cada hash SHA-256 (clave en minúsculas) lleva a su destino.
+  (function(){
+    var DESTINOS = {
+      "02b1d1fb5c8017c78e62504f8128ad5c5628af9b5c1b7f7278a37bd71c879940": "../Clases/todas/",
+      "9d9ad68d753303d39b0fcb3ba1d14961842d3e675bbc529648fb5d1ba69c5944": "../Clases/galgo/"
+    };
+    var f = document.getElementById('claveForm'); if(!f) return;
+    function sha256(t){ return crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)).then(function(b){ return Array.prototype.map.call(new Uint8Array(b), function(x){ return ('0'+x.toString(16)).slice(-2); }).join(''); }); }
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = document.getElementById('claveMsg');
+      if(!(window.crypto && crypto.subtle)){ msg.textContent = 'Este navegador no permite verificar la clave.'; return; }
+      sha256(document.getElementById('claveInput').value.trim().toLowerCase()).then(function(h){
+        if(DESTINOS[h]){ msg.style.color = 'var(--gold)'; msg.textContent = 'Entrando…'; window.location.href = DESTINOS[h]; }
+        else { msg.style.color = 'var(--terra)'; msg.textContent = 'Clave incorrecta.'; }
+      });
+    });
+  })();
   (function(){
     var links = Array.prototype.slice.call(document.querySelectorAll('nav.topnav ul a'));
     var map = {}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
