@@ -96,7 +96,7 @@
     var clave = document.getElementById("k").value.trim().toLowerCase();
     if(!(window.crypto && crypto.subtle)){ msg.textContent = "Este navegador no permite verificar la clave."; return; }
     sha256(clave).then(function(h){
-      var ir = clase.accesos[h] || (UNIVERSAL[h] && clase.destino);
+      var ir = clase.accesos[h] || (UNIVERSAL[h] && (clase.destino || "../Clases/todas/"));
       if(ir){ msg.style.color = "var(--accent)"; msg.textContent = "Entrando…"; window.location.href = ir; }
       else { msg.style.color = "var(--terra)"; msg.textContent = "Clave incorrecta."; }
     });
