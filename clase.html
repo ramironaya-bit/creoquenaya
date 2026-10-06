@@ -71,7 +71,8 @@
   var CLASES = {
     "produccion":                  { eyebrow:"Clases · Producción",  title:"Producción", back:"./#clases", site:"NAYA", destino:PROD, accesos:{} },
     "digitakt-ii":                 { eyebrow:"Clases · Producción",  title:"Digitakt II", back:PROD, site:"NAYA", destino:PROD+"digitakt-ii/", accesos:{} },
-    "ableton":                     { eyebrow:"Clases · Producción",  title:"Ableton Live", back:PROD, site:"NAYA", destino:PROD+"ableton/", accesos:{} }
+    "ableton":                     { eyebrow:"Clases · Producción",  title:"Ableton Live", back:PROD, site:"NAYA", destino:PROD+"ableton/", accesos:{} },
+    "beatstep-pro":                { eyebrow:"Clases · Producción",  title:"BeatStep Pro", back:PROD, site:"NAYA", destino:PROD+"beatstep-pro/", accesos:{} }
   };
   var slug = (new URLSearchParams(location.search).get("m") || "").toLowerCase();
   var clase = CLASES[slug] || { eyebrow:"Clases", title:"Clases", back:"./#clases", site:"NAYA", accesos:{} };
