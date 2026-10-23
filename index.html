@@ -98,17 +98,17 @@
   .yt-label em{ color:var(--gold); font-style:normal; }
 
   /* ---------- marcas (gestión cultural) ---------- */
-  .brands{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:3.2rem; }
+  .brands{ display:grid; grid-template-columns:repeat(2,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line); margin-bottom:3.2rem; }
   @media (min-width:900px){ .brands{ grid-template-columns:repeat(5,1fr); } }
   @media (max-width:899px){ .brands .brand-tile:last-child:nth-child(odd){ grid-column:1 / -1; } }
   .brand-tile .wm{ font-family:var(--font-poster); text-transform:uppercase; font-size:1.7rem; line-height:.95; letter-spacing:.02em; text-align:center; color:var(--gold); height:4rem; display:flex; align-items:center; justify-content:center; transition:transform .2s; }
   .brand-tile:hover .wm{ transform:scale(1.05); }
-  .brand-tile{ background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.1rem; padding:2.2rem 1rem 1.2rem; min-height:12rem; text-decoration:none; transition:background .15s; }
+  .brand-tile{ background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:1.1rem; padding:3rem 1rem 1.2rem; min-height:12rem; text-decoration:none; transition:background .15s;  box-shadow:inset -1px -1px 0 var(--line); }
   .brand-tile:hover, .brand-tile:focus-visible{ background:var(--bg-raised); }
   .brand-tile img{ height:4rem; width:auto; max-width:78%; object-fit:contain; transition:transform .2s; }
-  .brand-tile img[src*="contradiccion"]{ height:auto; max-width:92%; }
+  .brand-tile img[src*="contradiccion"]{ height:4rem; width:92%; max-width:92%; object-fit:contain; }
   .brand-tile:hover img{ transform:scale(1.05); }
-  .brand-tile .cap{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-faint); transition:color .15s; }
+  .brand-tile .cap{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-faint); transition:color .15s;  text-align:center; }
   .brand-tile:hover .cap{ color:var(--gold); }
 
   /* ---------- clases ---------- */
@@ -264,7 +264,7 @@
       <a class="brand-tile" href="https://www.instagram.com/seki.party/" target="_blank" rel="noopener"><img src="assets/img/logos/seki.png" alt="SEKI Party"><span class="cap">SEKI · desde 2023</span></a>
       <a class="brand-tile" href="https://www.sekito.ar/" target="_blank" rel="noopener"><img src="assets/img/logos/abanico.png" alt="SEKITO"><span class="cap">SEKITO · productora</span></a>
       <a class="brand-tile" href="https://www.instagram.com/vardo.vardito/" target="_blank" rel="noopener"><img src="assets/img/logos/vardito.png" alt="VARDITO"><span class="cap">VARDITO · 2024</span></a>
-      <a class="brand-tile" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><img src="assets/img/logos/contradiccion.png" alt="CONTRADICCIÓN"><span class="cap">CONTRADICCIÓN · 2025</span></a>
+      <a class="brand-tile" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><img src="assets/img/logos/contradiccion.png" alt="CONTRADICCIÓN"><span class="cap" aria-label="Contradicción · 2025">Contra<br>adicción · 2025</span></a>
       <a class="brand-tile" href="https://www.instagram.com/p/DbWkjG_pAPl/" target="_blank" rel="noopener"><img src="assets/img/logos/colapso.png" alt="COLAPSO"><span class="cap">COLAPSO · 2026</span></a>
     </div>
 
