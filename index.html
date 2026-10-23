@@ -99,7 +99,10 @@
 
   /* ---------- marcas (gestión cultural) ---------- */
   .brands{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:3.2rem; }
-  @media (min-width:900px){ .brands{ grid-template-columns:repeat(4,1fr); } }
+  @media (min-width:900px){ .brands{ grid-template-columns:repeat(5,1fr); } }
+  @media (max-width:899px){ .brands .brand-tile:last-child:nth-child(odd){ grid-column:1 / -1; } }
+  .brand-tile .wm{ font-family:var(--font-poster); text-transform:uppercase; font-size:1.7rem; line-height:.95; letter-spacing:.02em; text-align:center; color:var(--gold); height:4rem; display:flex; align-items:center; justify-content:center; transition:transform .2s; }
+  .brand-tile:hover .wm{ transform:scale(1.05); }
   .brand-tile{ background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.1rem; padding:2.2rem 1rem 1.2rem; min-height:12rem; text-decoration:none; transition:background .15s; }
   .brand-tile:hover, .brand-tile:focus-visible{ background:var(--bg-raised); }
   .brand-tile img{ height:4rem; width:auto; max-width:78%; object-fit:contain; transition:transform .2s; }
@@ -163,7 +166,7 @@
     <div class="wrap">
       <div class="sec-num">01</div>
       <h2 class="sec-title">Mú<span class="out">sica</span></h2>
-      <p class="sec-phrase">Diverso, versátil y algo pretencioso.</p>
+      <p class="sec-phrase">Diverso, versátil y pretencioso.</p>
     </div>
   </header>
 
@@ -259,8 +262,9 @@
     <div class="brands">
       <a class="brand-tile" href="https://www.instagram.com/seki.party/" target="_blank" rel="noopener"><img src="assets/img/logos/seki.png" alt="SEKI Party"><span class="cap">SEKI · desde 2023</span></a>
       <a class="brand-tile" href="https://www.sekito.ar/" target="_blank" rel="noopener"><img src="assets/img/logos/abanico.png" alt="SEKITO"><span class="cap">SEKITO · productora</span></a>
-      <a class="brand-tile" href="https://www.instagram.com/p/DbWkjG_pAPl/" target="_blank" rel="noopener"><img src="assets/img/logos/colapso.png" alt="COLAPSO"><span class="cap">COLAPSO · 2026</span></a>
       <a class="brand-tile" href="https://www.instagram.com/vardo.vardito/" target="_blank" rel="noopener"><img src="assets/img/logos/vardito.png" alt="VARDITO"><span class="cap">VARDITO · 2024</span></a>
+      <a class="brand-tile" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="wm" role="img" aria-label="Contradicción">Contra<br>dicción</span><span class="cap">CONTRADICCIÓN · 2025</span></a>
+      <a class="brand-tile" href="https://www.instagram.com/p/DbWkjG_pAPl/" target="_blank" rel="noopener"><img src="assets/img/logos/colapso.png" alt="COLAPSO"><span class="cap">COLAPSO · 2026</span></a>
     </div>
 
     <div class="groups">
@@ -275,6 +279,7 @@
 
       <div>
         <h3 class="gh">Ciclos y otras fiestas</h3>
+        <a class="lk" href="https://plantainclan.com/eventos/contradiccion/" target="_blank" rel="noopener"><span class="lk-t">Contradicción · 2025</span><span class="lk-d">Obra de teatro, a partir de una idea propia · Planta</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://drive.google.com/file/d/16IQ348mdfeLkISzxH6Ab6bv09mzJUmK0/view?usp=drive_link" target="_blank" rel="noopener"><span class="lk-t">VARDITO · 2024</span><span class="lk-d">Ciclo de música en vivo y danza · dossier</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.alternativateatral.com/obra90951-vardito-experimentos-entre-musica-y-movimiento" target="_blank" rel="noopener"><span class="lk-t">VARDITO en Alternativa Teatral</span><span class="lk-d">Ficha del ciclo</span><span class="lk-a">↗</span></a>
         <a class="lk" href="https://www.instagram.com/vardo.vardito/" target="_blank" rel="noopener"><span class="lk-t">VARDO</span><span class="lk-d">La fiesta de VARDITO (2023 y 2024) · Instagram</span><span class="lk-a">↗</span></a>
